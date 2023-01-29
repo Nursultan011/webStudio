@@ -1,0 +1,39 @@
+.button{
+  cursor: pointer;
+  display: block;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
+  text-decoration: none;
+  background: #ffe34a;
+  padding: 12px 20px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  align-items: center;
+  &:hover{
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    -webkit-box-shadow: 0 0 80px #c3c3c3;
+    box-shadow: 0 0 80px #c3c3c3;
+  }
+}
+
+.text-field{
+  letter-spacing: 1px;
+  border: 2px solid #e8e8e8;
+  border-radius: 2px;
+  color: #1e1e1e;
+  padding: 8px 16px;
+  font-size: 15px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  font-weight: 600;
+  &::placeholder{
+    color: #1e1e1e;
+    opacity: 0.4;
+  }
+}
