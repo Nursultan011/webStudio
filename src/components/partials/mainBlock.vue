@@ -13,9 +13,7 @@
             <span> Оставьте заявку на расчет стоимости сайта </span>
             <img src="../../assets/icons/arrow-right.svg" alt="" />
           </div>
-          <div class="main__email-link">
-            <a href="mailto:info@digital-lab.kz">info@digital-lab.kz</a>
-          </div>
+          <a class="main__email-link" href="mailto:info@digital-lab.kz">info@digital-lab.kz</a>
         </div>
         <a class="scroll">
           <img src="../../assets/icons/arrow-down.svg" alt="" />
@@ -93,11 +91,13 @@ export default {};
     position: absolute;
     right: 0;
     bottom: 5vh;
-    a {
-      text-decoration: none;
-      color: #6d6d6d;
-      font-size: 14px;
-      font-weight: 700;
+    text-decoration: none;
+    color: #6d6d6d;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s;
+    &:hover{
+      color: white;
     }
   }
   &__request {
