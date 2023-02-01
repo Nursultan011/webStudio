@@ -48,6 +48,8 @@ export default {};
       position: relative;
       display: flex;
       justify-content: center;
+      -webkit-animation: scrollDown 1s infinite alternate;
+      animation: scrollDown 1s infinite alternate;
       img {
         width: 16px;
         height: 18px;
@@ -72,6 +74,31 @@ export default {};
     img {
       margin-left: 12px;
     }
+  }
+}
+
+@-webkit-keyframes scrollDown {
+  from {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  to {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0.5;
+  }
+}
+
+@keyframes scrollDown {
+  from {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0.5;
   }
 }
 </style>
