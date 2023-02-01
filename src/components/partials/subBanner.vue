@@ -1,6 +1,6 @@
 <template>
   <section class="sub-banner">
-    <div class="container">
+    <div class="container-fluid">
       <div class="sub-banner__inner">
         <div class="sub-banner__content">
           <div class="icon">
