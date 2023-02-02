@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <div class="container">
+    <div class="container-fluid">
       <div class="about__inner">
         <div class="about__card" v-for="(item, i) in about_info" :key="i">
           <div class="about__card-img">

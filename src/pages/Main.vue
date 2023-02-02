@@ -1,5 +1,6 @@
 <template>
   <div>
+    <header-block />
     <main-block />
     <about-block />
     <sub-banner />
@@ -12,6 +13,7 @@
 <script>
 export default {
   components: {
+    headerBlock: () => import('../components/global/header.vue'),
     mainBlock: () => import("../components/partials/mainBlock.vue"),
     AboutBlock: () => import("../components/partials/aboutBlock.vue"),
     SubBanner: () => import("../components/partials/subBanner.vue"),

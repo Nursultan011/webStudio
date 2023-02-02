@@ -1,6 +1,6 @@
 <template>
   <section class="steps">
-    <div class="container">
+    <div class="container-fluid">
       <div class="steps__inner">
         <div class="steps__title">Этапы работы</div>
         <div class="steps__list">
