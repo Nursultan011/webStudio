@@ -9,22 +9,43 @@
             <a href="tel:+77019997660">+7 (701) 999 76 60</a>
           </div>
           <h1>Разработка и продвижение сайтов на высоком уровне</h1>
-          <div class="main__request">
+          <div class="main__request" @click="openPopup">
             <span> Оставьте заявку на расчет стоимости сайта </span>
             <img src="../../assets/icons/arrow-right.svg" alt="" />
           </div>
-          <a class="main__email-link" href="mailto:info@digital-lab.kz">info@digital-lab.kz</a>
+          <a class="main__email-link" href="mailto:info@digital-lab.kz">
+            info@digital-lab.kz
+          </a>
         </div>
         <a class="scroll">
           <img src="../../assets/icons/arrow-down.svg" alt="" />
         </a>
       </div>
     </div>
+    <Popup :activePopup="activePopup" @close="activePopup = false" />
   </section>
 </template>
 
 <script>
-export default {};
+import { ref } from "vue";
+export default {
+  components: {
+    Popup: () => import("../global/popup.vue"),
+  },
+  setup() {
+    const activePopup = ref(false);
+
+    const openPopup = () => {
+      activePopup.value = true;
+      console.log(activePopup.value);
+    };
+
+    return {
+      activePopup,
+      openPopup,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -38,9 +59,9 @@ export default {};
     text-shadow: 0 40px 70px rgba(0, 0, 0, 0.4);
     font-weight: 800;
     font-size: 44vw;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #272727;
-    opacity: .8;
+    opacity: 0.8;
   }
   &__contact-phone {
     color: white;
@@ -96,7 +117,7 @@ export default {};
     font-size: 14px;
     font-weight: 700;
     transition: 0.2s;
-    &:hover{
+    &:hover {
       color: white;
     }
   }
@@ -104,6 +125,13 @@ export default {};
     display: flex;
     align-items: center;
     margin-top: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      img {
+        margin-left: 18px;
+      }
+    }
     span {
       font-size: 18px;
       line-height: 20px;
@@ -116,6 +144,7 @@ export default {};
     }
     img {
       margin-left: 12px;
+      transition: 0.4s;
     }
   }
 }
