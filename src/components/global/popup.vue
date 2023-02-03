@@ -36,7 +36,7 @@
             placeholder="Введите адрес эль. почты"
           />
         </div>
-        <button class="button" type="submit" @click="sendRequest">Оставить заявку</button>
+        <button class="button" type="submit">Оставить заявку</button>
       </div>
       <div class="popup__form-wrap" v-else-if="formStep == 2">
         Форма успешно заполнено

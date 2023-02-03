@@ -1,25 +1,54 @@
 <template>
   <div>
-    <header-block />
-    <main-block />
-    <about-block />
-    <sub-banner />
-    <sentence-banner />
-    <steps-block />
-    <breif-banner />
+    <loader
+      v-if="beforeLoader"
+      object="#ffffff"
+      color1="#ffffff"
+      color2="#17fd3d"
+      size="18"
+      speed="2.2"
+      bg="#1e1f20"
+      objectbg="#ffffff"
+      opacity="100"
+      disableScrolling="false"
+      name="loading"
+    ></loader>
+    <div>
+      <header-block />
+      <main-block />
+      <about-block />
+      <sub-banner />
+      <sentence-banner />
+      <steps-block />
+      <breif-banner />
+    </div>
   </div>
 </template>
 
 <script>
+import { ref, onMounted } from "vue";
 export default {
   components: {
-    headerBlock: () => import('../components/global/header.vue'),
+    headerBlock: () => import("../components/global/header.vue"),
     mainBlock: () => import("../components/partials/mainBlock.vue"),
     AboutBlock: () => import("../components/partials/aboutBlock.vue"),
     SubBanner: () => import("../components/partials/subBanner.vue"),
     SentenceBanner: () => import("../components/partials/sentenceBanner.vue"),
     StepsBlock: () => import("../components/partials/stepsBlock.vue"),
     BreifBanner: () => import("../components/partials/breifBanner.vue"),
+  },
+  setup() {
+    const beforeLoader = ref(true);
+
+    onMounted(() => {
+      setTimeout(() => {
+        beforeLoader.value = false;
+      }, 1800);
+    });
+
+    return {
+      beforeLoader,
+    };
   },
 };
 </script>

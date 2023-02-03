@@ -4,7 +4,9 @@ import router from './router'
 import store from './store'
 import axios from "axios";
 import './styles/style.scss'
+import loader from "vue-ui-preloader";
 
+Vue.use(loader);
 Vue.config.productionTip = false
 
 new Vue({
