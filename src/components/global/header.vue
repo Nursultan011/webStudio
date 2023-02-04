@@ -37,6 +37,7 @@ export default {
   width: 100%;
   padding: 35px 0;
   z-index: 5;
+  transition: .25s ease-in;
   &__logo {
     a {
       color: white;
@@ -64,6 +65,7 @@ export default {
         &:hover {
           background: white;
           color: black;
+          cursor: pointer;
         }
       }
     }
@@ -94,6 +96,7 @@ export default {
   }
   .header__btns {
     &-request {
+      display: block;
       button {
         color: black;
         border: 2px solid black;

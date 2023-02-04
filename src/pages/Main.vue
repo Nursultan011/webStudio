@@ -14,7 +14,7 @@
       name="loading"
     ></loader>
     <div>
-      <header-block />
+      <header-block ref="headerBlock" :class="{'sticky': headerSticky}"/>
       <main-block />
       <about-block />
       <sub-banner />
@@ -37,8 +37,24 @@ export default {
     StepsBlock: () => import("../components/partials/stepsBlock.vue"),
     BreifBanner: () => import("../components/partials/breifBanner.vue"),
   },
+  methods: {
+    handleScroll() {
+      this.setHeaderStickyOption()
+    },
+    setHeaderStickyOption() {
+      const headerHeight = this.$refs.headerBlock.$el.clientHeight
+      this.headerSticky = window.scrollY - headerHeight > 50;
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
   setup() {
     const beforeLoader = ref(false);
+    const headerSticky = ref(false);
 
     onMounted(() => {
       setTimeout(() => {
@@ -48,6 +64,7 @@ export default {
 
     return {
       beforeLoader,
+      headerSticky,
     };
   },
 };
