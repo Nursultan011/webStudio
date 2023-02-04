@@ -5,9 +5,6 @@
       <div class="main__inner">
         <header></header>
         <div class="content">
-          <div class="main__contact-phone">
-            <a href="tel:+77019997660">+7 (701) 999 76 60</a>
-          </div>
           <h1>Разработка и продвижение сайтов на высоком уровне</h1>
           <div class="main__request" @click="openPopup">
             <span> Оставьте заявку на расчет стоимости сайта </span>
@@ -62,20 +59,6 @@ export default {
     font-family: "Raleway", sans-serif;
     color: #272727;
     opacity: 0.8;
-  }
-  &__contact-phone {
-    color: white;
-    transform: rotate(270deg);
-    font-size: 24px;
-    font-weight: 700;
-    position: fixed;
-    right: 0;
-    top: 50vh;
-    text-transform: uppercase;
-    a {
-      text-decoration: none;
-      color: white;
-    }
   }
   &__inner {
     min-height: 100vh;
