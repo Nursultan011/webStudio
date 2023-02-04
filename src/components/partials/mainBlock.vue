@@ -173,4 +173,17 @@ export default {
     opacity: 0.5;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .main {
+    &__inner {
+      .content {
+        h1 {
+          font-size: 24px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
 </style>

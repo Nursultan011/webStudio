@@ -123,4 +123,15 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .about {
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__card {
+      width: 100%;
+    }
+  }
+}
 </style>

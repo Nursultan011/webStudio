@@ -17,6 +17,20 @@
   </header>
 </template>
 
+<script>
+import { ref, watchEffect } from "vue";
+
+export default {
+  setup() {
+    watchEffect(() => {
+      console.log(window.scrollY);
+    });
+
+    return {};
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 .header {
   position: absolute;
@@ -28,7 +42,7 @@
       color: white;
     }
     text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 28px;
     font-weight: 800;
     z-index: 3;
