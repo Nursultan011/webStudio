@@ -6,13 +6,14 @@
           <div class="icon">
             <img src="../../assets/icons/banner-icon.svg" alt="" />
           </div>
-          <div class="title">
-            Готовое мобильное приложение для доставки еды и каталога товаров
-          </div>
+          <div class="title">Создадим сайт для вашего бизнеса за 14 дней с гарантией возврата средств</div>
           <div class="actions">
-            <span>От 4 500 руб. в месяц</span>
-            <button class="button">О приложении</button>
+            <span>Оставьте заявку, и наш менеджер свяжется с вами в ближайшее время</span>
           </div>
+          <form class="form">
+            <input class="text-field" type="tel" placeholder="Телефон" />
+            <button class="button">Обсудить проект</button>
+          </form>
         </div>
         <div class="sub-banner__img">
           <img src="../../assets/images/banner-image.png" alt="" />
@@ -30,7 +31,8 @@ export default {};
 .sub-banner {
   margin-bottom: 50px;
   &__inner {
-    background: #f9f9f9;
+    background-image: url("../../assets/images/sentence-banner.png");
+    background-size: contain;
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -47,18 +49,30 @@ export default {};
       }
     }
     .title {
-      font-size: 24px;
+      font-size: 20px;
       line-height: 30px;
-      margin-bottom: 32px;
+      margin-bottom: 16px;
       font-weight: 800;
     }
     .actions {
       span {
         display: block;
-        font-weight: 700;
-        font-size: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        opacity: .65;
         line-height: 23px;
         margin-bottom: 32px;
+      }
+    }
+    .form {
+      display: flex;
+      align-items: center;
+      input {
+        height: 35px;
+      }
+      button {
+        height: 35px;
+        margin-left: 30px;
       }
     }
   }

@@ -21,7 +21,7 @@
       <main-block ref="mainBlock"/>
       <about-block />
       <sub-banner />
-      <sentence-banner />
+<!--      <sentence-banner />-->
       <steps-block />
       <breif-banner />
     </div>
