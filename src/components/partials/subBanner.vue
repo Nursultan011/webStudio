@@ -28,7 +28,7 @@ export default {};
     width: 100%;
     display: flex;
     align-items: center;
-    background-image: url("/img/sentence-banner.437096ab.png");
+    background-image: url("../../assets/images/sentence-banner.png");
     background-repeat: no-repeat;
     background-size: cover;
     -o-object-position: center center;
