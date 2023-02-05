@@ -13,9 +13,12 @@
       disableScrolling="false"
       name="loading"
     ></loader>
+    <div class="fixed-phone-link" ref="fixedPhoneLink">
+      <a href="tel:+77019997660" :class="{'black': fixedPhoneLinkBlackColor}">+7 (701) 999 76 60</a>
+    </div>
     <div>
-      <header-block />
-      <main-block />
+      <header-block ref="headerBlock" :class="{'sticky': headerSticky}"/>
+      <main-block ref="mainBlock"/>
       <about-block />
       <sub-banner />
       <steps-block />
@@ -23,6 +26,27 @@
     </div>
   </div>
 </template>
+
+<style lang="scss">
+.fixed-phone-link {
+  color: white;
+  transform: rotate(270deg);
+  font-size: 24px;
+  font-weight: 700;
+  position: fixed;
+  right: -5%;
+  top: 50vh;
+  text-transform: uppercase;
+  a {
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+  }
+  a.black {
+    color: black;
+  }
+}
+</style>
 
 <script>
 import { ref, onMounted } from "vue";
@@ -35,8 +59,31 @@ export default {
     StepsBlock: () => import("../components/partials/stepsBlock.vue"),
     BreifBanner: () => import("../components/partials/breifBanner.vue"),
   },
+  methods: {
+    handleScroll() {
+      this.setHeaderStickyOption()
+      this.setPhoneLinkColorOption()
+    },
+    setHeaderStickyOption() {
+      const headerHeight = this.$refs.headerBlock.$el.clientHeight
+      this.headerSticky = window.scrollY - headerHeight > 50;
+    },
+    setPhoneLinkColorOption() {
+      const mainHeight = this.$refs.mainBlock.$el.clientHeight
+      const fixedPhoneLinkHeight = this.$refs.fixedPhoneLink.clientHeight
+      this.fixedPhoneLinkBlackColor = window.scrollY > (mainHeight / 1.8 + fixedPhoneLinkHeight)
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
   setup() {
     const beforeLoader = ref(false);
+    const headerSticky = ref(false);
+    const fixedPhoneLinkBlackColor = ref(false);
 
     onMounted(() => {
       setTimeout(() => {
@@ -46,6 +93,8 @@ export default {
 
     return {
       beforeLoader,
+      headerSticky,
+      fixedPhoneLinkBlackColor
     };
   },
 };
