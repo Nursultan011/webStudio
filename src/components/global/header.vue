@@ -110,4 +110,13 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 20px 0;
+    &__logo {
+      font-size: 24px;
+    }
+  }
+}
 </style>
