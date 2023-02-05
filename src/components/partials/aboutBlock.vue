@@ -4,7 +4,10 @@
       <div class="about__inner">
         <div class="about__card" v-for="(item, i) in about_info" :key="i">
           <div class="about__card-img">
-            <img src="" alt="" />
+            <img
+              :src="require(`../../assets/icons/service-${i + 1}.png`)"
+              alt=""
+            />
           </div>
           <div class="about__card-title">{{ item.title }}</div>
           <div class="about__card-description">
@@ -131,6 +134,19 @@ export default {
     }
     &__card {
       width: 100%;
+      &-img {
+        margin-bottom: 20px;
+      }
+      &-title {
+        min-height: auto;
+        padding-bottom: 20px;
+        margin-bottom: 0px;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      & + .about__card {
+        margin-top: 30px;
+      }
     }
   }
 }

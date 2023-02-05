@@ -7,7 +7,7 @@
             Хотите узнать стоимость разработки вашего сайта?
           </div>
           <div class="actions">
-            <button class="button">Заполнить бриф</button>
+            <button class="button" @click="openBreif">Заполнить бриф</button>
           </div>
         </div>
         <div class="brief__img">
@@ -19,7 +19,21 @@
 </template>
 
 <script>
-export default {};
+import { useRouter } from "vue-router";
+export default {
+  setup() {
+    const router = useRouter();
+
+    const openBreif = () => {
+      router.push("/breif");
+    };
+
+    return {
+      router,
+      openBreif,
+    };
+  },
+};
 </script>
 
 <style lang="scss">

@@ -102,9 +102,9 @@ export default {
   top: 0;
   width: 100%;
   height: 100vh;
-  overflow: scroll;
+  overflow: hidden;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 4;
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,6 +125,8 @@ export default {
     background: #fefefe;
     padding: 65px 15px 0;
     max-width: 100%;
+    max-height: 90vh;
+    overflow: auto;
     &-wrap {
       margin: 0 auto;
       max-width: 370px;
@@ -173,6 +175,14 @@ export default {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .popup {
+    &__form {
+      max-width: calc(100% - 32px);
     }
   }
 }

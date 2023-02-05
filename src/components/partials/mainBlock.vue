@@ -162,10 +162,31 @@ export default {
     &__inner {
       .content {
         h1 {
-          font-size: 24px;
-          line-height: 40px;
+          font-size: 26px;
+          line-height: 34px;
         }
       }
+    }
+    &__request {
+      margin-top: 30px;
+      span {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 800;
+        max-width: 70%;
+      }
+    }
+    &__contact-phone {
+      display: none;
+    }
+    &__email-link {
+      display: none;
+    }
+    &__bg {
+      left: -10vw;
+      bottom: 0vw;
+      font-size: 130vw;
+      top: unset;
     }
   }
 }

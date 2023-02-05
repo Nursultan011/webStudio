@@ -49,11 +49,23 @@ export default {};
       }
     }
     .title {
+      margin-bottom: 32px;
+      font-size: 40px;
+      color: #1e1e1e;
       font-size: 20px;
       line-height: 30px;
       margin-bottom: 16px;
       font-weight: 800;
     }
+    .form {
+      display: flex;
+      align-items: center;
+      input {
+        height: 35px;
+      }
+      button {
+        height: 35px;
+        margin-left: 30px;
     .actions {
       span {
         display: block;
@@ -86,6 +98,32 @@ export default {};
       height: 300px;
       object-fit: contain;
       object-position: left bottom;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sub-banner {
+    &__content {
+      width: 100%;
+      padding: 30px;
+      background-color: transparent;
+      .title {
+        font-size: 28px;
+      }
+      .form {
+        flex-wrap: wrap;
+        input {
+          width: 100%;
+        }
+        button {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+    }
+    &__img {
+      display: none;
     }
   }
 }
