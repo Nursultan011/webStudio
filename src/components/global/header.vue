@@ -31,13 +31,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .header {
   position: absolute;
   width: 100%;
   padding: 35px 0;
   z-index: 5;
-  transition: .25s ease-in;
+  transition: 0.25s ease-in;
   &__logo {
     a {
       color: white;
@@ -117,6 +117,9 @@ export default {
 @media screen and (max-width: 767px) {
   .header {
     padding: 20px 0;
+    &__btns-request {
+      display: none !important;
+    }
     &__logo {
       font-size: 24px;
     }

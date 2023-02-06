@@ -7,7 +7,9 @@
             Хотите узнать стоимость разработки вашего сайта?
           </div>
           <div class="actions">
-            <button class="button" @click="openBreif">Заполнить бриф</button>
+            <button class="button">
+              <router-link to="/breif"> Заполнить бриф </router-link>
+            </button>
           </div>
         </div>
         <div class="brief__img">
@@ -19,19 +21,9 @@
 </template>
 
 <script>
-import { useRouter } from "vue-router";
 export default {
   setup() {
-    const router = useRouter();
-
-    const openBreif = () => {
-      router.push("/breif");
-    };
-
-    return {
-      router,
-      openBreif,
-    };
+    return {};
   },
 };
 </script>

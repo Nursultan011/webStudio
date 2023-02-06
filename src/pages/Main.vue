@@ -14,11 +14,13 @@
       name="loading"
     ></loader>
     <div class="fixed-phone-link" ref="fixedPhoneLink">
-      <a href="tel:+77019997660" :class="{'black': fixedPhoneLinkBlackColor}">+7 (701) 999 76 60</a>
+      <a href="tel:+77019997660" :class="{ black: fixedPhoneLinkBlackColor }"
+        >+7 (701) 999 76 60</a
+      >
     </div>
     <div>
-      <header-block ref="headerBlock" :class="{'sticky': headerSticky}"/>
-      <main-block ref="mainBlock"/>
+      <header-block ref="headerBlock" :class="{ sticky: headerSticky }" />
+      <main-block ref="mainBlock" />
       <about-block />
       <sub-banner />
       <steps-block />
@@ -40,10 +42,16 @@
   a {
     text-decoration: none;
     color: white;
-    transition: .5s;
+    transition: 0.5s;
   }
   a.black {
     color: black;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .fixed-phone-link {
+    display: none;
   }
 }
 </style>
@@ -61,24 +69,25 @@ export default {
   },
   methods: {
     handleScroll() {
-      this.setHeaderStickyOption()
-      this.setPhoneLinkColorOption()
+      this.setHeaderStickyOption();
+      this.setPhoneLinkColorOption();
     },
     setHeaderStickyOption() {
-      const headerHeight = this.$refs.headerBlock.$el.clientHeight
+      const headerHeight = this.$refs.headerBlock.$el.clientHeight;
       this.headerSticky = window.scrollY - headerHeight > 50;
     },
     setPhoneLinkColorOption() {
-      const mainHeight = this.$refs.mainBlock.$el.clientHeight
-      const fixedPhoneLinkHeight = this.$refs.fixedPhoneLink.clientHeight
-      this.fixedPhoneLinkBlackColor = window.scrollY > (mainHeight / 1.8 + fixedPhoneLinkHeight)
-    }
+      const mainHeight = this.$refs.mainBlock.$el.clientHeight;
+      const fixedPhoneLinkHeight = this.$refs.fixedPhoneLink.clientHeight;
+      this.fixedPhoneLinkBlackColor =
+        window.scrollY > mainHeight / 1.8 + fixedPhoneLinkHeight;
+    },
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   },
   beforeUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   },
   setup() {
     const beforeLoader = ref(false);
@@ -94,7 +103,7 @@ export default {
     return {
       beforeLoader,
       headerSticky,
-      fixedPhoneLinkBlackColor
+      fixedPhoneLinkBlackColor,
     };
   },
 };

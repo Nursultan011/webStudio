@@ -77,38 +77,40 @@ export default {};
       button {
         height: 35px;
         margin-left: 30px;
-    .actions {
-      span {
-        display: block;
-        font-weight: 500;
-        font-size: 18px;
-        opacity: .65;
-        line-height: 23px;
-        margin-bottom: 32px;
+        .actions {
+          span {
+            display: block;
+            font-weight: 500;
+            font-size: 18px;
+            opacity: 0.65;
+            line-height: 23px;
+            margin-bottom: 32px;
+          }
+        }
+        .form {
+          display: flex;
+          align-items: center;
+          input {
+            height: 35px;
+          }
+          button {
+            height: 35px;
+            margin-left: 30px;
+          }
+        }
       }
-    }
-    .form {
-      display: flex;
-      align-items: center;
-      input {
-        height: 35px;
+      &__img {
+        padding-top: 50px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 300px;
+          height: 300px;
+          object-fit: contain;
+          object-position: left bottom;
+        }
       }
-      button {
-        height: 35px;
-        margin-left: 30px;
-      }
-    }
-  }
-  &__img {
-    padding-top: 50px;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    img {
-      width: 300px;
-      height: 300px;
-      object-fit: contain;
-      object-position: left bottom;
     }
   }
 }
