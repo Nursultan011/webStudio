@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="container-fluid d-flex justify-space-between align-center">
-      <div class="header__logo">
+      <div class="header__logo" data-aos="fade-right" data-aos-duration="1000">
         <router-link to="/">Digital <span>Lab</span></router-link>
       </div>
       <div class="header__btns d-flex justify-space-between align-center">

@@ -7,8 +7,8 @@
             Хотите узнать стоимость разработки вашего сайта?
           </div>
           <div class="actions">
-            <button class="button">
-              <router-link to="/breif"> Заполнить бриф </router-link>
+            <button class="button" @click="$router.push('/breif')">
+              Заполнить бриф
             </button>
           </div>
         </div>

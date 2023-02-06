@@ -1,16 +1,28 @@
 <template>
   <section class="main">
     <div class="container-fluid">
-      <div class="main__bg">D</div>
+      <div class="main__bg" data-aos="zoom-in" data-aos-duration="1500">D</div>
       <div class="main__inner">
         <header></header>
         <div class="content">
-          <h1>Разработка и продвижение сайтов на высоком уровне</h1>
-          <div class="main__request" @click="openPopup">
+          <h1 data-aos="fade-right" data-aos-duration="2000">
+            Разработка и продвижение сайтов на высоком уровне
+          </h1>
+          <div
+            class="main__request"
+            @click="openPopup"
+            data-aos="fade-right"
+            data-aos-duration="2500"
+          >
             <span> Оставьте заявку на расчет стоимости сайта </span>
             <img src="../../assets/icons/arrow-right.svg" alt="" />
           </div>
-          <a class="main__email-link" href="mailto:info@digital-lab.kz">
+          <a
+            class="main__email-link"
+            href="mailto:info@digital-lab.kz"
+            data-aos="fade-right"
+            data-aos-duration="3000"
+          >
             info@digital-lab.kz
           </a>
         </div>

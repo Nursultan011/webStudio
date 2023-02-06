@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import axios from "axios";
 import './styles/style.scss'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import loader from "vue-ui-preloader";
 
 Vue.use(loader);
@@ -13,5 +15,8 @@ new Vue({
   router,
   store,
   axios,
-  render: h => h(App)
+  render: h => h(App),
+  mounted() {
+    AOS.init()
+  }
 }).$mount('#app')
