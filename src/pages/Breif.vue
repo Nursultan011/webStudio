@@ -134,6 +134,7 @@ export default {
 
 <style lang="scss">
 .breif {
+  background: white;
   &-header {
     position: fixed !important;
     background: white !important;

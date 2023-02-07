@@ -30,7 +30,7 @@ export default {
 
 <style lang="scss">
 .brief {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   background: white;
   &__inner {
     background: #f9f9f9;

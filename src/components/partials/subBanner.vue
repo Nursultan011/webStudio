@@ -3,7 +3,8 @@
     <div class="container-fluid">
       <div class="sub-banner__inner">
         <div class="sub-banner__content" data-aos="fade-right">
-          <div class="title">Обсудим проект?</div>
+          <div class="title">Разработаем проект для вашего бизнеса под ключ за 14 дней с гарантией возврата средств</div>
+          <div class="description">Оставьте заявку, и наш специалист свяжется с вами в ближайшее время</div>
           <form class="form">
             <input class="text-field" type="tel" placeholder="Телефон" />
             <button class="button">Обсудить проект</button>
@@ -40,10 +41,16 @@ export default {};
     padding: 50px;
     background-color: #f9f9f9;
     .title {
-      margin-bottom: 32px;
-      font-size: 40px;
+      margin-bottom: 15px;
+      font-size: 24px;
       color: #1e1e1e;
       font-weight: 800;
+    }
+    .description {
+      margin-bottom: 36px;
+      font-size: 16px;
+      font-weight: 500;
+      opacity: .7;
     }
     .form {
       display: flex;
@@ -77,7 +84,7 @@ export default {};
       padding: 30px;
       background-color: transparent;
       .title {
-        font-size: 28px;
+        font-size: 20px;
       }
       .form {
         flex-wrap: wrap;
