@@ -10,10 +10,16 @@
 
 html{
   box-sizing: border-box;
+  background-color: #1e1f20;
 }
 
 body{
   margin: 0;
+  background-color: #1e1f20;
+}
+
+#app{
+  background-color: #1e1f20;
 }
 
 *,*::before,*::after{

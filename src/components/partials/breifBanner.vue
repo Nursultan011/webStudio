@@ -30,7 +30,8 @@ export default {
 
 <style lang="scss">
 .brief {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  background: white;
   &__inner {
     background: #f9f9f9;
     width: 100%;
@@ -61,6 +62,21 @@ export default {
       max-height: 310px;
       object-fit: contain;
       object-position: left center;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .brief {
+    &__inner {
+      margin-top: 50px;
+    }
+    &__content {
+      padding: 25px;
+      .title {
+        font-size: 28px;
+        line-height: 32px;
+      }
     }
   }
 }

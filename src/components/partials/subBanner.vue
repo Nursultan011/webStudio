@@ -2,7 +2,7 @@
   <section class="sub-banner">
     <div class="container-fluid">
       <div class="sub-banner__inner">
-        <div class="sub-banner__content">
+        <div class="sub-banner__content" data-aos="fade-right">
           <div class="title">Обсудим проект?</div>
           <form class="form">
             <input class="text-field" type="tel" placeholder="Телефон" />
@@ -23,7 +23,8 @@ export default {};
 
 <style lang="scss">
 .sub-banner {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  background: white;
   &__inner {
     width: 100%;
     display: flex;

@@ -2,7 +2,11 @@
   <section class="sentence-banner">
     <div class="container-fluid">
       <div class="sentence-banner__inner">
-        <div class="sentence-banner__wrap">
+        <div
+          class="sentence-banner__wrap"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+        >
           <div class="title">Обсудим проект?</div>
           <form class="form">
             <input class="text-field" type="tel" placeholder="Телефон" />

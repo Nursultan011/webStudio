@@ -1,18 +1,5 @@
 <template>
   <div>
-    <loader
-      v-if="beforeLoader"
-      object="#ffffff"
-      color1="#ffffff"
-      color2="#17fd3d"
-      size="18"
-      speed="2.2"
-      bg="#1e1f20"
-      objectbg="#ffffff"
-      opacity="100"
-      disableScrolling="false"
-      name="loading"
-    ></loader>
     <div class="fixed-phone-link" ref="fixedPhoneLink">
       <a href="tel:+77019997660" :class="{ black: fixedPhoneLinkBlackColor }"
         >+7 (701) 999 76 60</a

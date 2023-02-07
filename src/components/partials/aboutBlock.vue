@@ -2,7 +2,13 @@
   <section class="about">
     <div class="container-fluid">
       <div class="about__inner">
-        <div class="about__card" v-for="(item, i) in about_info" :key="i">
+        <div
+          class="about__card"
+          v-for="(item, i) in about_info"
+          :key="i"
+          data-aos="flip-left"
+          data-aos-duration="1000"
+        >
           <div class="about__card-img">
             <img
               :src="require(`../../assets/icons/service-${i + 1}.png`)"
@@ -80,6 +86,7 @@ export default {
 <style lang="scss">
 .about {
   padding: 100px 0;
+  background: white;
   &__inner {
     display: flex;
     justify-content: space-between;

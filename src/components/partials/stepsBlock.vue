@@ -4,7 +4,12 @@
       <div class="steps__inner">
         <div class="steps__title">Этапы работы</div>
         <div class="steps__list">
-          <div class="steps__item" v-for="(item, i) in step_list" :key="i">
+          <div
+            class="steps__item"
+            v-for="(item, i) in step_list"
+            :key="i"
+            data-aos="flip-left"
+          >
             <div class="steps__item-icon">
               <img src="" alt="" />
               <!-- <img :src="require(`@/assets/icons/${item.icon}`)" alt="" /> -->
@@ -69,7 +74,8 @@ export default {
 
 <style lang="scss">
 .steps {
-  margin: 100px 0;
+  background: white;
+  padding: 100px 0;
   &__title {
     width: 100%;
     font-size: 50px;
@@ -108,6 +114,37 @@ export default {
       font-weight: 500;
       text-align: center;
       padding: 0 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .steps {
+    padding-top: 20px;
+    &__title {
+      font-size: 26px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 100%;
+      & + .steps__item {
+        margin-top: 15px;
+        border-top: 0.7px solid #1e1f20;
+        padding-top: 15px;
+      }
+      &-icon {
+        display: none;
+      }
+      &-title {
+        text-align: left;
+      }
+      &-description {
+        text-align: left;
+      }
     }
   }
 }
