@@ -1,7 +1,13 @@
 <template>
   <div v-if="modalState" class="popup">
-    <form class="popup__form" @submit.prevent="sendRequest">
-      <div @click="modalState = false" class="popup__close">X</div>
+    <form class="popup__form"
+          @submit.prevent="sendRequest"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+    >
+      <div @click="modalState = false"
+           class="popup__close"
+      >X</div>
       <div class="popup__form-wrap" v-if="formStep == 1">
         <div class="title">Оставьте заявку</div>
         <div class="description">

@@ -12,6 +12,7 @@
       <sub-banner />
       <steps-block />
       <breif-banner />
+      <footer-block  />
     </div>
   </div>
 </template>
@@ -53,6 +54,7 @@ export default {
     SubBanner: () => import("../components/partials/subBanner.vue"),
     StepsBlock: () => import("../components/partials/stepsBlock.vue"),
     BreifBanner: () => import("../components/partials/breifBanner.vue"),
+    footerBlock: () => import("../components/global/footer.vue")
   },
   methods: {
     handleScroll() {

@@ -11,7 +11,7 @@
         >
           <div class="about__card-img">
             <img
-              :src="require(`../../assets/icons/service-${i + 1}.png`)"
+              :src="require(`../../assets/icons/ico${i + 1}.svg`)"
               alt=""
             />
           </div>
