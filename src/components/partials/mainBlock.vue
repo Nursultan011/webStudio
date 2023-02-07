@@ -6,7 +6,7 @@
         <header></header>
         <div class="content">
           <h1 data-aos="fade-left" data-aos-duration="800" data-aos-offset="0">
-            Разработка и продвижение сайтов на высоком уровне
+            {{ $t("message.main_title") }}
           </h1>
           <div
             class="main__request"

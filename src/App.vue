@@ -36,4 +36,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.loader-bar {
+  font-weight: 700 !important;
+}
+</style>

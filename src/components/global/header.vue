@@ -9,8 +9,20 @@
           <button>Получить предложение</button>
         </div>
         <div class="header__btns-langs">
-          <button id="ruBtn">РУ</button>
-          <button id="enBtn">EN</button>
+          <button
+            id="ruBtn"
+            @click="localeChange('ru')"
+            :class="{ active: true ? $i18n.locale == 'ru' : false }"
+          >
+            РУ
+          </button>
+          <button
+            id="enBtn"
+            @click="localeChange('en')"
+            :class="{ active: true ? $i18n.locale == 'en' : false }"
+          >
+            EN
+          </button>
         </div>
       </div>
     </div>
@@ -19,14 +31,19 @@
 
 <script>
 import { ref, watchEffect } from "vue";
-
+import { i18n } from "../../main";
 export default {
   setup() {
-    watchEffect(() => {
-      console.log(window.scrollY);
-    });
+    const langs = ref(["ru", "en"]);
 
-    return {};
+    const localeChange = (val) => {
+      i18n.locale = val;
+    };
+
+    return {
+      langs,
+      localeChange,
+    };
   },
 };
 </script>
@@ -70,11 +87,31 @@ export default {
       }
     }
     &-langs {
+      select {
+        cursor: pointer;
+        border: 1.5px solid white;
+        color: white;
+        width: 60px;
+        height: 28px;
+        font-size: 16px;
+        padding: 0;
+        font-weight: 500;
+        background: transparent;
+        appearance: none;
+      }
+      .active {
+        border-bottom: 1.5px solid #fff243 !important;
+        color: #fff243 !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+      }
       button {
         color: white;
         background: none;
         border: none;
         font-weight: 500;
+        font-size: 14px;
+        transition: 0.3s;
         &:hover {
           cursor: pointer;
         }
