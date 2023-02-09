@@ -3,11 +3,11 @@
     <div class="container-fluid">
       <div class="sub-banner__inner">
         <div class="sub-banner__content" data-aos="fade-right">
-          <div class="title">Разработаем проект для вашего бизнеса под ключ за 14 дней с гарантией возврата средств</div>
-          <div class="description">Оставьте заявку, и наш специалист свяжется с вами в ближайшее время</div>
+          <div class="title">{{ $t('subBanner.title') }}</div>
+          <div class="description">{{ $t('subBanner.descr') }}</div>
           <form class="form">
-            <input class="text-field" type="tel" placeholder="Телефон" />
-            <button class="button">Обсудить проект</button>
+            <input class="text-field" type="tel" :placeholder="$t('subBanner.form.input')" />
+            <button class="button">{{ $t('subBanner.form.btn') }}</button>
           </form>
         </div>
         <div class="sub-banner__img">

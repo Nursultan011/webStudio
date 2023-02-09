@@ -9,45 +9,45 @@
            class="popup__close"
       >X</div>
       <div class="popup__form-wrap" v-if="formStep == 1">
-        <div class="title">Оставьте заявку</div>
+        <div class="title">{{ $t('popup.title') }}</div>
         <div class="description">
-          Оставьте ваши данные и мы свяжемся с вами в ближайшее время
+          {{ $t('popup.descr') }}
         </div>
         <div class="text-field-group">
-          <label for="name">Имя</label>
+          <label for="name">{{ $t('popup.form.name.label') }}</label>
           <input
             v-model="form.name"
             required
             name="name"
             type="text"
-            placeholder="Введите ваше имя"
+            :placeholder="$t('popup.form.name.input')"
           />
         </div>
         <div class="text-field-group">
-          <label for="phone">Телефон</label>
+          <label for="phone">{{ $t('popup.form.phone.label') }}</label>
           <input
             v-model="form.phone"
             required
             name="phone"
             type="phone"
-            placeholder="Номер телефона"
+            :placeholder="$t('popup.form.phone.input')"
           />
         </div>
         <div class="text-field-group">
-          <label for="email">E-mail</label>
+          <label for="email">{{ $t('popup.form.email.label') }}</label>
           <input
             v-model="form.email"
             name="email"
             type="email"
-            placeholder="Введите адрес эль. почты"
+            :placeholder="$t('popup.form.email.input')"
           />
         </div>
-        <button class="button" type="submit">Оставить заявку</button>
+        <button class="button" type="submit">{{ $t('popup.form.btn') }}</button>
       </div>
       <div class="popup__form-wrap" v-else-if="formStep == 2">
-        Форма успешно заполнено
+        {{ $t('popup.form.success') }}
       </div>
-      <div class="popup__form-wrap" v-else-if="formStep == 3">Ошибка</div>
+      <div class="popup__form-wrap" v-else-if="formStep == 3">{{ $t('popup.form.failed') }}</div>
     </form>
   </div>
 </template>

@@ -4,11 +4,11 @@
       <div class="brief__inner">
         <div class="brief__content">
           <div class="title">
-            Хотите узнать стоимость разработки вашего сайта?
+            {{ $t('brief.title') }}
           </div>
           <div class="actions">
             <button class="button" @click="$router.push('/breif')">
-              Заполнить бриф
+              {{ $t('brief.btn') }}
             </button>
           </div>
         </div>
