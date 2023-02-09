@@ -30,6 +30,36 @@
 <script>
 import { ref } from "vue";
 
+export const servicesRu = {
+  services: {
+    web: {
+      title: "Разработка веб-проектов",
+      descr_list: [
+        "Разработка одностраничных веб-сайтов",
+        "Разработка корпоративных веб-сайтов",
+        "Разработка веб-каталогов и интернет-магазинов",
+        "Разработка веб-порталов по индивидуальному тех. заданию",
+        "Редизайн и доработка действующих веб-проектов"
+      ],
+    }
+  }
+}
+
+export const servicesEng = {
+  services: {
+    web: {
+      title: "Web projects development",
+      descr_list: [
+        "Development of single-page websites",
+        "Development of corporate websites",
+        "Development of web catalogs and online stores",
+        "Development of custom-made web portals",
+        "Redesign and improvement of existing web projects"
+      ],
+    }
+  }
+}
+
 export default {
   setup() {
     const about_info = ref([
@@ -58,21 +88,20 @@ export default {
       {
         title: "Дизайн и брендинг",
         descr_list: [
+          "Веб-сайты и сервисы",
+          "Мобильные приложения",
+          "UI/UX исследования",
+          "Моушн дизайн",
+          "3D визуализация",
           "Логотип и фирменный стиль",
           "Полиграфическая продукция",
           "Упаковка",
-          "Наружная реклама",
-          "Сайты и веб-сервисы",
-          "Мобильные приложения",
-          "Моушн дизайн",
-          "3D визуализация",
-          "Промышленный дизайн",
-          " Дизайн архитектурной среды",
+          "Наружная реклама"
         ],
       },
       {
         title: "Разработка мобильных приложений",
-        descr_list: ["Android", "iOS", "Windows", "Разработка игр"],
+        descr_list: ["Android", "iOS", "Windows"],
       },
     ]);
 

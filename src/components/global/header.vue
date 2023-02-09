@@ -6,7 +6,7 @@
       </div>
       <div class="header__btns d-flex justify-space-between align-center">
         <div class="header__btns-request">
-          <button>Получить предложение</button>
+          <button @click="openPopup">{{ $t("message.header_cta_btn") }}</button>
         </div>
         <div class="header__btns-langs">
           <button
@@ -26,6 +26,7 @@
         </div>
       </div>
     </div>
+    <Popup :activePopup="activePopup" @close="activePopup = false" />
   </header>
 </template>
 
@@ -33,7 +34,17 @@
 import { ref, watchEffect } from "vue";
 import { i18n } from "../../main";
 export default {
+  components: {
+    Popup: () => import("../global/popup.vue"),
+  },
   setup() {
+    const activePopup = ref(false);
+
+    const openPopup = () => {
+      activePopup.value = true;
+      console.log(activePopup.value);
+    };
+
     const langs = ref(["ru", "en"]);
 
     const localeChange = (val) => {
@@ -43,6 +54,8 @@ export default {
     return {
       langs,
       localeChange,
+      activePopup,
+      openPopup,
     };
   },
 };

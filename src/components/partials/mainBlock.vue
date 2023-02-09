@@ -14,7 +14,7 @@
             data-aos="fade-left"
             data-aos-duration="1200"
           >
-            <span> Оставьте заявку на расчет стоимости сайта </span>
+            <span> {{ $t("message.cta_btn") }} </span>
             <img src="../../assets/icons/arrow-right.svg" alt="" />
           </div>
           <a class="main__email-link" href="mailto:info@digital-lab.kz">
@@ -76,13 +76,13 @@ export default {
     padding-bottom: 50px;
     .content {
       h1 {
-        font-size: 56px;
+        font-size: 48px;
         line-height: 60px;
         color: #fefefe;
         font-weight: 700;
         pointer-events: none;
         z-index: 2;
-        max-width: 700px;
+        max-width: 900px;
       }
     }
     .scroll {

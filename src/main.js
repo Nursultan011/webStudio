@@ -15,9 +15,11 @@ Vue.use(VueI18n);
 Vue.use(loader);
 Vue.config.productionTip = false
 
-export const i18n = new VueI18n({
+export const i18n =  VueI18n({
+  legacy: false,
   locale: 'ru',
-  messages
+  fallbackLocale: 'en',
+  messages,
 });
 
 new Vue({
