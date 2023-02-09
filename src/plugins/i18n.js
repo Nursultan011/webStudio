@@ -104,6 +104,7 @@ export const messages = {
         description: "Тестируем сайт после запуска в течение 3-х месяцев для улучшения юзабилити и увеличения конверсии",
       },
     ],
+    stepsTitle: 'Этапы работы',
     brief: {
       title: 'Хотите узнать стоимость разработки вашего проекта?',
       btn: 'Заполнить бриф'
@@ -239,6 +240,7 @@ export const messages = {
             "We test the site after launch for 3 months to improve usability and increase conversion",
       },
     ],
+    stepsTitle: 'Working steps',
     brief: {
       title: 'Want to know the cost of developing your web-project?',
       btn: 'Fill out the brief'
