@@ -129,6 +129,10 @@ export const messages = {
         },
         btn: 'Оставить заявку'
       }
+    },
+    footer: {
+      title: 'Сделано с ❤️ от ',
+      rights: 'Все права защищены'
     }
   },
   en: {
@@ -265,6 +269,10 @@ export const messages = {
         },
         btn: 'Submit Request'
       }
+    },
+    footer: {
+      title: 'Made with ❤️ from ',
+      rights: 'All rights reserved'
     }
   }
 };
