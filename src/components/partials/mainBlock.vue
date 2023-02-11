@@ -115,7 +115,7 @@ export default {
         font-weight: 700;
         pointer-events: none;
         z-index: 2;
-        max-width: 66%;
+        max-width: 55%;
       }
     }
     .scroll {
