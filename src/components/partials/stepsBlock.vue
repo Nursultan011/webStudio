@@ -43,17 +43,17 @@
   &__item {
     width: 20%;
     &-icon {
-      margin-bottom: 50px;
+      margin-bottom: 36px;
       display: flex;
       justify-content: center;
       svg {
-        width: 140px;
+        width: 100px;
       }
     }
     &-title {
       font-size: 18px;
       line-height: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
       font-weight: 700;
       text-align: center;
       padding: 0 12px;

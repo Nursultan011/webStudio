@@ -5,6 +5,9 @@
       <div class="main__inner">
         <header></header>
         <div class="content">
+          <div class="geek-img">
+            <img src="../../assets/images/geek-img.svg" alt="">
+          </div>
           <h1 data-aos="fade-left" data-aos-duration="800" data-aos-offset="0">
             {{ $t("message.main_title") }}
           </h1>
@@ -58,8 +61,8 @@ export default {
   min-height: 100vh;
   &__bg {
     position: absolute;
-    left: -6vw;
-    top: -13vw;
+    right: 10vw;
+    top: 0;
     text-shadow: 0 40px 70px rgba(0, 0, 0, 0.4);
     font-weight: 800;
     font-size: 44vw;
@@ -75,6 +78,17 @@ export default {
     justify-content: space-between;
     padding-bottom: 50px;
     .content {
+      .geek-img {
+        position: absolute;
+        top: 20vh;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+        img {
+          width: 30%;
+        }
+      }
       h1 {
         font-size: 48px;
         line-height: 60px;

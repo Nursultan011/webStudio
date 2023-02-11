@@ -30,6 +30,7 @@ export default {
 
 <style lang="scss">
 .brief {
+  padding-top: 80px;
   padding-bottom: 100px;
   background: white;
   &__inner {
@@ -59,7 +60,8 @@ export default {
     justify-content: center;
     img {
       max-width: 100%;
-      max-height: 310px;
+      max-height: 400px;
+      margin-top: -80px;
       object-fit: contain;
       object-position: left center;
     }
