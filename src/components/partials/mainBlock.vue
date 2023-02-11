@@ -1,13 +1,16 @@
 <template>
   <section class="main">
     <div class="container-fluid">
-      <div class="main__bg" data-aos="zoom-in" data-aos-duration="3000">D</div>
+      <div class="main__bg" data-aos="zoom-in" data-aos-duration="3000">
+        D
+        <div class="geek-img">
+          <img src="../../assets/images/geek-img.svg" alt="" />
+        </div>
+      </div>
+
       <div class="main__inner">
         <header></header>
         <div class="content">
-          <div class="geek-img">
-            <img src="../../assets/images/geek-img.svg" alt="">
-          </div>
           <h1 data-aos="fade-left" data-aos-duration="800" data-aos-offset="0">
             {{ $t("message.main_title") }}
           </h1>
@@ -19,6 +22,9 @@
           >
             <span> {{ $t("message.cta_btn") }} </span>
             <img src="../../assets/icons/arrow-right.svg" alt="" />
+          </div>
+          <div class="main__geek-img">
+            <img src="../../assets/images/geek-img.svg" alt="" />
           </div>
           <a class="main__email-link" href="mailto:info@digital-lab.kz">
             info@digital-lab.kz
@@ -59,6 +65,25 @@ export default {
 .main {
   background-color: #1e1f20;
   min-height: 100vh;
+  &__geek-img {
+    display: none;
+  }
+  .geek-img {
+    position: absolute;
+    top: 10vh;
+    right: 11vw;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 30%;
+    padding: 0 1% 0 0;
+    img {
+      width: 100%;
+      height: 75%;
+      display: block;
+    }
+  }
   &__bg {
     position: absolute;
     right: 10vw;
@@ -78,17 +103,6 @@ export default {
     justify-content: space-between;
     padding-bottom: 50px;
     .content {
-      .geek-img {
-        position: absolute;
-        top: 20vh;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        vertical-align: middle;
-        img {
-          width: 30%;
-        }
-      }
       h1 {
         font-size: 48px;
         line-height: 60px;
@@ -96,7 +110,7 @@ export default {
         font-weight: 700;
         pointer-events: none;
         z-index: 2;
-        max-width: 900px;
+        max-width: 66%;
       }
     }
     .scroll {
@@ -180,11 +194,25 @@ export default {
 
 @media screen and (max-width: 767px) {
   .main {
+    &__geek-img {
+      position: absolute;
+      display: block;
+      height: 400px;
+      margin-top: 30px;
+      img {
+        height: 100%;
+      }
+    }
+    .geek-img {
+      display: none;
+    }
     &__inner {
+      padding-bottom: 100px;
       .content {
         h1 {
           font-size: 26px;
           line-height: 34px;
+          max-width: 100%;
         }
       }
     }
