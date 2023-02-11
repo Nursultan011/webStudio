@@ -2,7 +2,7 @@
   <section class="main">
     <div class="container-fluid">
       <div class="main__bg">
-        <div data-aos="zoom-in" data-aos-duration="2000">D</div>
+        <div class="d" data-aos-duration="2000">D</div>
         <div class="geek-img">
           <img src="../../assets/images/geek-img.svg" alt="" />
         </div>
@@ -94,6 +94,11 @@ export default {
     font-family: "Raleway", sans-serif;
     color: #272727;
     opacity: 0.8;
+    & > .d {
+      font-size: 100%;
+      height: 100%;
+      display: block;
+    }
   }
   &__inner {
     min-height: 100vh;
