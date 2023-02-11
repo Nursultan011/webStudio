@@ -8,7 +8,7 @@
             class="steps__item"
             v-for="(item, i) in $t('steps')"
             :key="i"
-            data-aos="flip-left"
+            data-aos="fade-up"
           >
             <div class="steps__item-icon"  v-html="item.icon"></div>
             <div class="steps__item-title">

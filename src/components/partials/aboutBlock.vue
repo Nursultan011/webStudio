@@ -5,7 +5,7 @@
         <div
           class="about__card"
           v-for="(service, index) in $t('services')" :key="index"
-          data-aos="flip-left"
+          data-aos="fade-up"
           data-aos-duration="1000"
         >
           <div class="about__card-img">
