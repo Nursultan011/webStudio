@@ -53,7 +53,7 @@ export default {
     }
   }
   &__img {
-    padding: 35px 0 25px 0;
+    padding: 0;
     width: calc(100% - 600px);
     height: 100%;
     display: flex;
