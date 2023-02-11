@@ -1,8 +1,8 @@
 <template>
   <section class="main">
     <div class="container-fluid">
-      <div class="main__bg" data-aos="zoom-in" data-aos-duration="3000">
-        D
+      <div class="main__bg">
+        <div data-aos="zoom-in" data-aos-duration="2000">D</div>
         <div class="geek-img">
           <img src="../../assets/images/geek-img.svg" alt="" />
         </div>
@@ -76,7 +76,7 @@ export default {
     justify-content: center;
     vertical-align: middle;
     height: 100%;
-    width: 30%;
+    width: 40%;
     padding: 0 1% 0 0;
     img {
       width: 100%;

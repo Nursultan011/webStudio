@@ -139,6 +139,9 @@ export default {
   background: white;
   position: fixed;
   padding: 20px 0;
+  box-shadow: 1px 12px 27px -3px rgba(186,186,186,0.21);
+  -webkit-box-shadow: 1px 12px 27px -3px rgba(186,186,186,0.21);
+  -moz-box-shadow: 1px 12px 27px -3px rgba(186,186,186,0.21);
   .header__logo {
     a {
       color: black;
@@ -151,12 +154,19 @@ export default {
         color: black;
         border: 2px solid black;
         &:hover {
-          background: black;
-          color: white;
+          background: #ffe34a;
+          color: black;
+          border: 2px solid #ffe34a;
         }
       }
     }
     &-langs {
+      .active {
+        border-bottom: 1px solid black !important;
+        color: black !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+      }
       button {
         color: black;
       }
