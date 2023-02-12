@@ -212,7 +212,7 @@ export default {
       display: none;
     }
     &__inner {
-      padding-bottom: 200px;
+      padding-bottom: 80px;
       .content {
         h1 {
           font-size: 26px;
