@@ -1,5 +1,8 @@
 <template>
   <section class="brief">
+    <div class="brief__img-mobile" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="0">
+      <img src="../../assets/images/breif-banner.png" alt="" />
+    </div>
     <div class="container-fluid">
       <div class="brief__inner">
         <div class="brief__content">
@@ -65,13 +68,16 @@ export default {
       object-fit: contain;
       object-position: left center;
     }
+    &-mobile {
+      display: none;
+    }
   }
 }
 
 @media screen and (max-width: 767px) {
   .brief {
     &__inner {
-      margin-top: 50px;
+      //margin-top: 50px;
     }
     &__content {
       padding: 25px;
@@ -79,6 +85,21 @@ export default {
         font-size: 28px;
         line-height: 32px;
       }
+    }
+    &__img {
+      &-mobile {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 80%;
+        }
+      }
+    }
+    .button {
+      width: 100%;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
     }
   }
 }

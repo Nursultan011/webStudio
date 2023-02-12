@@ -212,7 +212,7 @@ export default {
       display: none;
     }
     &__inner {
-      padding-bottom: 100px;
+      padding-bottom: 200px;
       .content {
         h1 {
           font-size: 26px;
@@ -227,7 +227,7 @@ export default {
         font-size: 16px;
         line-height: 26px;
         font-weight: 800;
-        max-width: 70%;
+        max-width: 50%;
       }
     }
     &__contact-phone {

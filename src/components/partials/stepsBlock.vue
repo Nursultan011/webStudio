@@ -86,7 +86,12 @@
         padding-top: 15px;
       }
       &-icon {
-        display: none;
+        justify-content: flex-start;
+        margin-bottom: 16px;
+        padding: 0 12px;
+        svg {
+          width: 60px;
+        }
       }
       &-title {
         text-align: left;
