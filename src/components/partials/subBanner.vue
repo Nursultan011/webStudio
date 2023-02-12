@@ -56,10 +56,11 @@ export default {};
       display: flex;
       align-items: center;
       input {
-        height: 35px;
+        height: 45px;
       }
       button {
-        height: 35px;
+        height: 45px;
+        padding: 0 30px;
         margin-left: 30px;
       }
     }
