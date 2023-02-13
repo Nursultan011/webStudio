@@ -5,7 +5,7 @@
         <div class="sub-banner__content" data-aos="fade-right">
           <div class="title">{{ $t("subBanner.title") }}</div>
           <div class="description">{{ $t("subBanner.descr") }}</div>
-          <form class="form">
+          <form class="form" @submit.prevent="send">
             <input
               @change="validateTrig"
               v-model="form.phone"
@@ -14,7 +14,7 @@
               required
               :placeholder="$t('subBanner.form.input')"
             />
-            <button class="button" @click="send" :disabled="disabled">
+            <button class="button" type="submit" :disabled="disabled">
               {{ $t("subBanner.form.btn") }}
             </button>
           </form>
