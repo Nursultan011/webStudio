@@ -12,7 +12,14 @@
       <sub-banner />
       <steps-block />
       <breif-banner />
-      <footer-block  />
+      <footer-block />
+    </div>
+    <div class="whatsApp-link">
+      <a
+        href="https://wa.me/77019997660?text=Меня%20интересует%20создание%20веб-сайта"
+      >
+        <img src="../assets/icons/whatsapp.svg" alt="" />
+      </a>
     </div>
   </div>
 </template>
@@ -37,6 +44,17 @@
   }
 }
 
+.whatsApp-link {
+  position: fixed;
+  z-index: 5;
+  bottom: 12px;
+  right: 30px;
+  cursor: pointer;
+  img {
+    width: 35px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .fixed-phone-link {
     display: none;
@@ -54,7 +72,7 @@ export default {
     SubBanner: () => import("../components/partials/subBanner.vue"),
     StepsBlock: () => import("../components/partials/stepsBlock.vue"),
     BreifBanner: () => import("../components/partials/breifBanner.vue"),
-    footerBlock: () => import("../components/global/footer.vue")
+    footerBlock: () => import("../components/global/footer.vue"),
   },
   methods: {
     handleScroll() {

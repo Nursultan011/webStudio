@@ -3,11 +3,20 @@
     <div class="container-fluid">
       <div class="sub-banner__inner">
         <div class="sub-banner__content" data-aos="fade-right">
-          <div class="title">{{ $t('subBanner.title') }}</div>
-          <div class="description">{{ $t('subBanner.descr') }}</div>
+          <div class="title">{{ $t("subBanner.title") }}</div>
+          <div class="description">{{ $t("subBanner.descr") }}</div>
           <form class="form">
-            <input class="text-field" type="tel" :placeholder="$t('subBanner.form.input')" />
-            <button class="button">{{ $t('subBanner.form.btn') }}</button>
+            <input
+              @change="validateTrig"
+              v-model="form.phone"
+              class="text-field"
+              type="tel"
+              required
+              :placeholder="$t('subBanner.form.input')"
+            />
+            <button class="button" @click="send" :disabled="disabled">
+              {{ $t("subBanner.form.btn") }}
+            </button>
           </form>
         </div>
         <div class="sub-banner__img">
@@ -19,7 +28,45 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+import { ref, watchEffect } from "vue";
+
+export default {
+  setup() {
+    const disabled = ref(true);
+    const form = ref({
+      type: 2,
+      phone: "",
+    });
+
+    const send = () => {
+      axios
+        .post("api/send_contact_form", form.value)
+        .then((res) => {
+          console.log(res);
+          alert(res.data.message);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    };
+
+    const validateTrig = () => {
+      if (form.value.phone.length) {
+        disabled.value = false;
+      } else {
+        disabled.value = true;
+      }
+    };
+
+    return {
+      form,
+      send,
+      disabled,
+      validateTrig,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -50,7 +97,7 @@ export default {};
       margin-bottom: 36px;
       font-size: 16px;
       font-weight: 500;
-      opacity: .7;
+      opacity: 0.7;
     }
     .form {
       display: flex;
