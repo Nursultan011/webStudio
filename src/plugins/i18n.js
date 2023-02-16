@@ -2,7 +2,8 @@
 export const messages = {
   ru: {
     message: {
-      main_title: 'Разработка и продвижение веб-проектов на высоком уровне',
+      main_title: 'Разработка IT-продуктов и маркетинг-хакинг для вашего бизнеса',
+      main_descr: 'Автоматизируем бизнес процессы, повысим показатели продаж и среднего чека используя современные IT и Digital решения',
       cta_btn: 'Оставить заявку для консультации',
       header_cta_btn: 'Получить предложение',
     },
@@ -136,7 +137,8 @@ export const messages = {
   },
   en: {
     message: {
-      main_title: 'Development and promotion of web projects at a high level',
+      main_title: 'IT product development and marketing hacking for your business',
+      main_descr: 'We automate business processes, increase sales and average bill, using modern IT and Digital solutions',
       cta_btn: 'Submit a consultation enquiry',
       header_cta_btn: 'Get a proposal',
     },

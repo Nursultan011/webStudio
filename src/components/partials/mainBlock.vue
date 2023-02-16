@@ -14,6 +14,9 @@
           <h1 data-aos="fade-left" data-aos-duration="800" data-aos-offset="0">
             {{ $t("message.main_title") }}
           </h1>
+          <p data-aos="fade-left" data-aos-duration="800" data-aos-offset="0">
+            {{ $t('message.main_descr') }}
+          </p>
           <div
             class="main__request"
             @click="openPopup"
@@ -109,10 +112,19 @@ export default {
     padding-bottom: 50px;
     .content {
       h1 {
-        font-size: 48px;
-        line-height: 60px;
+        font-size: 32px;
+        line-height: 40px;
         color: #fefefe;
         font-weight: 700;
+        pointer-events: none;
+        z-index: 2;
+        max-width: 55%;
+      }
+      p {
+        font-size: 20px;
+        line-height: 130%;
+        color: #797979;
+        font-weight: 400;
         pointer-events: none;
         z-index: 2;
         max-width: 55%;
@@ -219,6 +231,10 @@ export default {
           line-height: 34px;
           max-width: 100%;
         }
+        p {
+          font-size: 16px;
+          max-width: 100%;
+        }
       }
     }
     &__request {
@@ -227,7 +243,7 @@ export default {
         font-size: 16px;
         line-height: 26px;
         font-weight: 800;
-        max-width: 50%;
+        max-width: 100%;
       }
     }
     &__contact-phone {
@@ -238,9 +254,13 @@ export default {
     }
     &__bg {
       left: -10vw;
-      bottom: 0vw;
+      top: 20vw;
       font-size: 130vw;
-      top: unset;
+      & > .d {
+        font-size: 70%;
+        height:70%;
+        display: block;
+      }
     }
   }
 }
